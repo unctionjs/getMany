@@ -1,5 +1,5 @@
 /* eslint-disable no-magic-numbers */
-import getMany from "./index"
+import getMany from "./index";
 
 test("getMany with Object", () => {
   expect(
@@ -9,8 +9,8 @@ test("getMany with Object", () => {
     })
   ).toEqual(
     ["aaa", "bbb"]
-  )
-})
+  );
+});
 
 test("getMany with Map", () => {
   expect(
@@ -22,8 +22,8 @@ test("getMany with Map", () => {
     ))
   ).toEqual(
     ["aaa", "bbb"]
-  )
-})
+  );
+});
 
 test("getMany with Array", () => {
   expect(
@@ -33,5 +33,5 @@ test("getMany with Array", () => {
     ])
   ).toEqual(
     [0, 1]
-  )
-})
+  );
+});
