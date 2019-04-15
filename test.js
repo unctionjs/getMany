@@ -1,37 +1,60 @@
-/* eslint-disable no-magic-numbers */
-import getMany from "./index";
+/* eslint-disable no-magic-numbers, no-undefined */
+import {test} from "tap";
 
-test("getMany with Object", () => {
-  expect(
-    getMany({
-      aaa: "111",
-      bbb: "222",
-    })
-  ).toEqual(
-    ["aaa", "bbb"]
+import getMany from "./";
+
+test("getMany with Object", ({same, end}) => {
+  same(
+    getMany(
+      ["aaa", "bbb"]
+    )({
+      aaa: 0,
+      bbb: 1,
+    }),
+    [0, 1]
   );
+  end();
 });
 
-test("getMany with Map", () => {
-  expect(
-    getMany(new Map(
+test("getMany with Object and bad key", ({same, end}) => {
+  same(
+    getMany(
+      ["aaa", "ccc"]
+    )({
+      aaa: 0,
+      bbb: 1,
+    }),
+    [0, undefined]
+  );
+  end();
+});
+
+test("getMany with Map", ({same, end}) => {
+  same(
+    getMany(
+      ["aaa", "bbb"]
+    )(new Map(
       [
         ["aaa", 0],
         ["bbb", 1],
       ]
-    ))
-  ).toEqual(
-    ["aaa", "bbb"]
-  );
-});
-
-test("getMany with Array", () => {
-  expect(
-    getMany([
-      "aaa",
-      "bbb",
-    ])
-  ).toEqual(
+    )),
     [0, 1]
   );
+  end();
+});
+
+test("getMany with Map and bad key", ({same, end}) => {
+  same(
+    getMany(
+      ["aaa", "ccc"]
+    )(new Map(
+      [
+        ["aaa", 0],
+        ["bbb", 1],
+      ]
+    )),
+    [0, undefined]
+  );
+  end();
 });

@@ -1,7 +1,7 @@
 {
   "name": "@unction/getmany",
   "version": "1.0.0",
-  "description": "Takes a keyed enumerable and returns the keys as an Array",
+  "description": "Takes a list of keys and a keyed enumerable, and returns the values for those keys",
   "keywords": [
     "unction",
     "functional"
@@ -51,9 +51,9 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/append": "4.0.0",
     "@unction/flip": "3.0.0",
-    "@unction/reducekeys": "7.0.0"
+    "@unction/get": "1.0.0",
+    "@unction/mapvalues": "9.0.0"
   },
   "files": [
     "index.js",

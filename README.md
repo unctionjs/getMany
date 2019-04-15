@@ -4,13 +4,13 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyedEnumerableType => ArrayType<KeyType>
+> ArrayType<KeyType> => KeyedEnumerableType => ArrayType<ValueType>
 
-Takes a keyed enumerable and returns the keys as an Array.
+Takes a list of keys and a keyed enumerable, and returns the values for those keys. If no key exists, the value is undefined.
 
 ``` javascript
-getMany({aaa: "111", bbb: "222"}) // ["aaa", "bbb"]
-getMany(["111", "222"]) // [0, 1]
+getMany(["aaa", "bbb"])({aaa: "111", bbb: "222"}) // ["111", "222"]
+getMany(["aaa", "ccc"])({aaa: "111", bbb: "222"}) // ["111", undefined]
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/getMany.svg?maxAge=2592000&style=flat-square
