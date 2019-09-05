@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ArrayType<KeyType> => KeyedEnumerableType => ArrayType<ValueType>
+> Array<A> => KeyedEnumerableType<B, A> => Array<B>
 
 Takes a list of keys and a keyed enumerable, and returns the values for those keys. If no key exists, the value is undefined.
 
