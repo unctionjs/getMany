@@ -1,5 +1,5 @@
 /* eslint-disable no-magic-numbers, no-undefined */
-import getMany from "./index.ts";
+import getMany from "./index";
 
 test("getMany with Object", () => {
   expect(getMany(
