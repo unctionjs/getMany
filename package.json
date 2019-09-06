@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@unction/flip": "4.1.1",
-    "@unction/get": "2.6.0",
+    "@unction/get": "2.7.0",
     "@unction/mapvalues": "10.6.0"
   },
   "files": [
