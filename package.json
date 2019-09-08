@@ -1,6 +1,6 @@
 {
   "name": "@unction/getmany",
-  "version": "2.7.1",
+  "version": "2.8.0",
   "description": "Takes a list of keys and a keyed enumerable, and returns the values for those keys",
   "keywords": [
     "unction",
