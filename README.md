@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<A> => KeyedEnumerableType<B, A> => Array<B>
+> Array<A> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B>
 
 Takes a list of keys and a keyed enumerable, and returns the values for those keys. If no key exists, the value is undefined.
 
